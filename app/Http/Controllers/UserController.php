@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use App\Http\Models\User;
+use App\User;
 
 class UserController extends Controller
 {
@@ -25,8 +25,8 @@ class UserController extends Controller
 
         /* validating */
         $this->validate($request, [
-            'nick' => 'required|max:255|unique:user,name',
-            'email' => 'required|max:255|unique:user,email|email',
+            'nick' => 'required|max:255|unique:users,name',
+            'email' => 'required|max:255|unique:users,email|email',
             'passwd' => 'required|max:255',
             'checkbox' => 'required',
         ]);
