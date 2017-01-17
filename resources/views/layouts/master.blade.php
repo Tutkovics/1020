@@ -15,11 +15,8 @@
 
     <!-- Styles -->
     @yield('stylesheet')
-
 </head>
 <body>
-
 @yield('content')
-
 </body>
 </html>

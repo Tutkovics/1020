@@ -13,12 +13,10 @@
                 <div class="title m-b-md">
                     Jelentkezz be!
                 </div>
-
                 @include('layouts._messages')
-
                 <div class="links">
-                    <a href="user/login">Belépés</a>
-                    <a href="user/registration">Regisztáció</a>
+                    <a href="{{ URL::route('user.login') }}">Belépés</a>
+                    <a href="{{ URL::route('user.registration') }}">Regisztáció</a>
                 </div>
             </div>
         </div>

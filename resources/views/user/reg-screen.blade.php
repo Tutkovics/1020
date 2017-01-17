@@ -14,25 +14,17 @@
             <div class="title m-b-md">
                 Regisztráció
             </div>
-
             @include('layouts._messages')
-
             <div>
                 {!! Form::open(['url' => '/user/save']) !!}
-
                     {{ Form::label('nick', 'Nick:') }}
-                    {{ Form::text('nick', null, array('class' => 'form-control input-text')) }} <br>
-
+                    {{ Form::text('nick', null, array('class' => 'form-control input-text', 'autofocus' =>'')) }} <br>
                     {{ Form::label('email', 'Email:') }}
                     {{ Form::text('email', null, array('class' => 'form-control input-text')) }} <br>
-
                     {{ Form::label('passwd', 'Jelszó:') }}
                     {{ Form::password('passwd', array('class' => 'form-control input-pass')) }} <br>
-
                     {{ Form::checkbox('checkbox', 'check') }} A <a href="/felhasznalasi-feltetelek">felhasználási feltételeket</a> elfogadom. <br>
-
                     {{ Form::submit('Regisztálok', array('class' => 'btn btn-success reg-btn')) }}
-
                 {!! Form::close() !!}
             </div>
         </div>

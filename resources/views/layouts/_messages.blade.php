@@ -1,6 +1,13 @@
 @if ( Session::has('success'))
     <div class="alert alert-success" role="alert">
-        <strong>Sikeres:</strong> {{ Session::get('success') }}
+        {{ Session::get('success') }}
+        <br>
+    </div>
+@endif
+
+@if ( Session::has('danger'))
+    <div class="alert alert-danger" role="alert">
+        {{ Session::get('danger') }}
         <br>
     </div>
 @endif

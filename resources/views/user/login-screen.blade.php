@@ -16,11 +16,12 @@
             </div>
             @include('layouts._messages')
             <div>
-                {!! Form::open(['url' => '/user/login']) !!}
+                {!! Form::open(['url' => '/user/auth']) !!}
                 {{ Form::label('name', 'Nick:') }}
-                {{ Form::text('name', null, array('class' => 'form-control input-text')) }} <br>
+                {{ Form::text('name', null, array('class' => 'form-control input-text', 'autofocus' =>'')) }} <br>
                 {{ Form::label('passwd', 'Jelszó:') }}
                 {{ Form::password('passwd', array('class' => 'form-control input-pass')) }} <br>
+                {{ Form::checkbox('rememberme', 'true') }} Emlékezz rám!<br>
                 {{ Form::submit('Belépés', array('class' => 'btn btn-success reg-btn')) }}
                 {!! Form::close() !!}
             </div>
