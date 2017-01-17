@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link rel="shortcut icon" type="image/png" href="{!! asset('img/favicon.png') !!}"/ Most google driveon van-->
-    <link rel="shortcut icon" type="image/png" href="https://drive.google.com/open?id=0B81ToBi1Or-jR0ZJTC04dXR2aFE"/>
+    <link rel="shortcut icon" type="image/png" href="http://chicagovalentine.pe.hu/igm_to_1020/favicon.png"/>
 
     <title>@yield('title')</title>
 
