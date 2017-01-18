@@ -68,3 +68,20 @@ body {
     background-color: #181818;
     color: #949fa3;
 }
+
+/* admin */
+.delete-user-btn{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+
+.list-group-item,
+.list-group-item > a{
+    color:#949fa3;
+    text-align: left;
+    margin-bottom: 2px;
+    background-color: #181818 ;
+    border: none;
+    text-decoration: none;
+}

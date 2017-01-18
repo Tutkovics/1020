@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\User;
+use App\Hookah;
 
 class UserController extends Controller
 {
@@ -77,8 +78,22 @@ class UserController extends Controller
     }
 
     public function getMyPage() {
-        //echo $user->name . ' -- Név<br>';
+        $lastHookah = Hookah::orderBy('created_at', 'desc')->first();
+        $diff = $lastHookah->created_at->diffInSeconds() / 60; /* in minute */
+        $diffSend = $lastHookah->created_at->diffForHumans();
 
-        return view('user.mypage');
+        $color = '#5cb85c';
+        if ( $diff < 10){
+            $status = 'Készül';
+        } elseif ( $diff < 50 ){
+            $status = 'Van';
+        } elseif ( $diff < 80 ){
+            $status = 'Haldoklik';
+        } else {
+            $status = 'Nincs';
+            $color = '#D06967';
+        }
+
+        return view('user.mypage',['status' => $status, 'diff' => $diffSend, 'color' => $color]);
     }
 }
